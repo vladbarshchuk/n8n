@@ -18,7 +18,7 @@ async def run_script():
         )
 
         agent = Agent(
-            task="Search the latest news on Trump, and send the one by BBC",
+            task="Go to this URL: https://www.instagram.com/nick_saraev/followers/ follow 5 account that have a profile picture of a person as well as first and last name",
             llm=llm,
             browser=browser,
             tools=tools
