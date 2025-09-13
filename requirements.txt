@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+browser_use
+google-generativeai
+playwright
