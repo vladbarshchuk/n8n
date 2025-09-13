@@ -3,3 +3,4 @@ uvicorn
 browser_use
 google-generativeai
 playwright
+uvx
