@@ -12,10 +12,13 @@ async def run_script():
         # Use Playwright browser (works better in containers)
         browser = Browser(headless=True)
         tools = Tools()
-        llm = ChatGoogle(model="gemini-2.0-flash-exp")
+        llm = ChatGoogle(
+            model="gemini-2.0-flash-exp",
+            api_key=os.getenv("GOOGLE_API_KEY")  # Reads from Railway environment variable
+        )
 
         agent = Agent(
-            task="Go to this URL: https://www.instagram.com/nick_saraev/followers/ follow 5 account that have a profile picture of a person as well as first and last name",
+            task="Search the latest news on Trump, and send the one by BBC",
             llm=llm,
             browser=browser,
             tools=tools
